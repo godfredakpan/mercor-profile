@@ -1,12 +1,13 @@
-# React + Vite
+# Mercor Team Profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This solution is to help view your mercor profile.
 
-Currently, two official plugins are available:
+Check it out here: https://mercor-profile.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instruction is to use your UUID(You can get it from logged in local storage) and use that on the form. 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="552" height="598" alt="Screenshot 2025-09-06 at 1 32 25 PM" src="https://github.com/user-attachments/assets/a9f7b2ff-e876-4702-98d6-1699bf4aee54" />
+
+
+NOTE: This project is not in anyway affiliated to Mercor, it was done as a side project by Godfred Akpan. 
