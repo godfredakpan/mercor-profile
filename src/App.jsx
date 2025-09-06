@@ -5,12 +5,18 @@ function App() {
   const [userId, setUserId] = useState('');
   const [generatedUrl, setGeneratedUrl] = useState('');
   const [copied, setCopied] = useState(false);
+  const [toast, setToast] = useState('');
 
   const generateUrl = () => {
-    if (userId.trim()) {
-      const cleanUserId = userId.trim();
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const cleanUserId = userId.trim();
+    if (uuidRegex.test(cleanUserId)) {
       const url = `https://team.mercor.com/profile/${cleanUserId}`;
       setGeneratedUrl(url);
+    } else {
+      setGeneratedUrl('');
+      setToast('Invalid UUID. Please enter a valid user ID.');
+      setTimeout(() => setToast(''), 2500);
     }
   };
 
@@ -30,6 +36,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      {toast && (
+        <div className="fixed top-6 right-6 bg-red-500 text-white px-4 py-2 rounded shadow-lg z-50 text-sm font-medium transition-all duration-300">
+          {toast}
+        </div>
+      )}
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
